@@ -23,7 +23,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -89,7 +89,7 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-/* css reset */
+/* css reset ^^^*/
 
 /* fonts and colors */
 
@@ -107,18 +107,94 @@ textarea:not([rows]) {
 .background {
   background-color: var(--Light-grayish-blue);
   font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* cards styling */
 
 .card {
   padding: 2rem;
+  border-radius: 12px;
+}
+
+.card * {
+  margin: 0;
 }
 
 .card__graduate {
   display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .card__profile-picture {
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.card__name-and-status {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.card__status {
+  font-size: 0.8125rem;
+  opacity: 50%;
+}
+
+.card__title {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card__story {
+  font-weight: 500;
+  opacity: 70%;
+  font-size: 0.8125rem;
+}
+
+/* card colors */
+
+.card--background-purple {
+  background-color: var(--Moderate-violet);
+  color: var(--White);
+}
+
+.card--background-gray {
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--White);
+}
+
+.card--background-white {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card--background-black {
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+
+/* card grid */
+.testimonial-cards {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin-inline: 1rem;
+}
+
+/* spans */
+
+.card--span-2-horizontal {
+  grid-column: span 2;
+}
+
+.card--span-2-vertical {
+  grid-column-start: 4;
+  grid-row: 1 / span 2;
 }
