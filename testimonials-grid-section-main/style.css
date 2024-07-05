@@ -108,3 +108,17 @@ textarea:not([rows]) {
   background-color: var(--Light-grayish-blue);
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+
+/* cards styling */
+
+.card {
+  padding: 2rem;
+}
+
+.card__graduate {
+  display: flex;
+}
+
+.card__profile-picture {
+  border-radius: 50%;
+}
